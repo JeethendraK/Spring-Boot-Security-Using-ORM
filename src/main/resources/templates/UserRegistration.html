@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>User Registration</title>
+</head>
+<body>
+    <h3> Welcome To User Registration Page</h3>
+    <form action="/register" method="post">
+        Name   : <input type="text" name="userName" required="required" />
+        Email  : <input type="text" name="userEmail" required="required" />
+        Password: <input type="text" name="userPwd" required="required" />
+        Roles  :
+        <input type="checkbox" names="userRoles" value="ADMIN" /> ADMIN
+        <input type="checkbox" names="userRoles" value="CUSTOMER" /> CUSTOMER
+        <input type="submit" value="Create User" />
+    </form>
+</body>
+</html>
