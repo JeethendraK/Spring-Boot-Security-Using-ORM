@@ -1,17 +1,21 @@
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>User Registration</title>
 </head>
 <body>
     <h3> Welcome To User Registration Page</h3>
-    <form action="/register" method="post">
-        Name   : <input type="text" name="userName" required="required" />
-        Email  : <input type="text" name="userEmail" required="required" />
-        Password: <input type="text" name="userPwd" required="required" />
-        Roles  :
+    <form th:action="@{/user/save}" method="POST">
+        <pre>
+        Name        : <input type="text" name="userName" required="required" />
+        Email       : <input type="text" name="userEmail" required="required" />
+        Password    : <input type="password" name="userPwd" required="required" />
+        Roles       :
         <input type="checkbox" names="userRoles" value="ADMIN" /> ADMIN
         <input type="checkbox" names="userRoles" value="CUSTOMER" /> CUSTOMER
         <input type="submit" value="Create User" />
-    </form>
+    </form> 
+    </pre>
+    <div> [[${message}]]></div>
+    <div> <a th:href="@{/}">Click here to go to Home Page</a></div>
 </body>
 </html>

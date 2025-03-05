@@ -28,7 +28,7 @@ public class UserController {
     @PostMapping("/save")
     public String saveUser(@ModelAttribute User user, Model model){
         Integer id = service.saveUser(user);
-        String message = "User '"+id+"' saved";
+        String message = "User '"+id+"' saved!!";
         model.addAttribute("message", message);
         return "UserRegistration";
     }
